@@ -40,6 +40,11 @@ namespace GOC.GraphQL.API
             services.AddSingleton<CustomerType>();
             services.AddSingleton<AddressType>();
             services.AddSingleton<CustomerInputType>();
+            services.AddSingleton<StateInputType>();
+            services.AddSingleton<AddressInputType>();
+
+
+
             services.AddTransient<IAddressRepository, AddressRepository>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
             var optionss = DbContextOptionsBuilder();

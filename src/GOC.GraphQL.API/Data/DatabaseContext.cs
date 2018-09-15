@@ -24,8 +24,7 @@ namespace GOC.GraphQL.API.Data
         public DatabaseContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<DatabaseContext>();
-            optionsBuilder.UseNpgsql("Server=vagrant;Port=5432;Database=GOC_GraphQL;Username=goc_postgres;Password=Robins01");
-
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=postgres;");
             return new DatabaseContext(optionsBuilder.Options);
         }
     }

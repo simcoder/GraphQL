@@ -10,5 +10,6 @@ namespace GOC.GraphQL.API.Interfaces
         Task<List<Customer>> All();
         Task<Customer> Update(Customer customer);
         Task<Customer> Add(Customer player);
+        Task<Customer> Delete(int id);
     }
 }

@@ -54,5 +54,12 @@ namespace GOC.GraphQL.API.Repositories
         {
             return await _db.Customers.FindAsync(id);
         }
+
+        public async Task<Customer> Delete(int id){
+            var customer = await _db.Customers.FindAsync(id);
+            _db.Customers.Remove(customer);
+            await _db.SaveChangesAsync();
+            return customer;
+        }
     }
 }
